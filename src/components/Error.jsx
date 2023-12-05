@@ -1,11 +1,11 @@
-import React from 'react';
 import useJsonFetch from './useJsonFetch';
 import '../styles/Component.css';
+import PropTypes from 'prop-types';
 
 export const Error = (props) => {
     const { url, title } = props;
 
-    const [data, loading, error] = useJsonFetch(url);
+    const [data, error] = useJsonFetch(url);
 
     return (
         <div className='component'>
@@ -15,4 +15,9 @@ export const Error = (props) => {
             {error && <div className='component-error'>{error.toString()}</div>}
         </div>
     );
+};
+
+Error.propTypes = {
+    url: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
 };

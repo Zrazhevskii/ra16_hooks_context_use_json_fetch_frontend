@@ -1,10 +1,10 @@
-import React from 'react';
 import useJsonFetch from './useJsonFetch';
 import '../styles/Component.css';
+import PropTypes from 'prop-types';
 
 export const Data = (props) => {
     const { url, title } = props;
-    const [data, loading, error] = useJsonFetch(url);
+    const [data] = useJsonFetch(url);
 
     return (
         <div className='component'>
@@ -13,4 +13,9 @@ export const Data = (props) => {
             <div className='component-ok'>{data.status}</div>
         </div>
     );
+};
+
+Data.propTypes = {
+    url: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
 };

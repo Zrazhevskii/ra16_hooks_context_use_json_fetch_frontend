@@ -1,11 +1,11 @@
-import React from 'react';
 import useJsonFetch from './useJsonFetch';
 import '../styles/Component.css';
+import PropTypes from 'prop-types';
 
 export const Loading = (props) => {
     const { url, title } = props;
 
-    const [data, loading, error] = useJsonFetch(url);
+    const [data, loading] = useJsonFetch(url);
 
     return (
         <div className='component'>
@@ -15,4 +15,9 @@ export const Loading = (props) => {
             {loading && <div className='component-load'>Загрузка...</div>}
         </div>
     );
+};
+
+Loading.propTypes = {
+    url: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
 };
