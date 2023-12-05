@@ -1,0 +1,40 @@
+.component {
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 6px 6px 6px #ccc;
+    margin-right: 32px;
+    margin-bottom: 20px;
+}
+.component:last-child {
+    margin-right: 0;
+}
+
+.component-url {
+    margin-bottom: 12px;
+    color: gray;
+}
+
+.component-ok {
+    font-size: 32px;
+    color: rgb(18, 169, 18);
+}
+
+.component-error {
+    font-size: 32px;
+    color: rgb(194, 40, 40);
+}
+
+.component-load {
+    animation: blink 1s ease infinite alternate-reverse;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
