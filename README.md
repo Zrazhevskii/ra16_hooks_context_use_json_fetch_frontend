@@ -14,7 +14,9 @@
 
 Покажите использование этого хука на примере трёх компонентов, каждый из которых делает запросы на следующие адреса:
 
-GET [http://localhost:7070/data]('http://localhost:7070/data') — успешное получение данных; \br
-GET [http://localhost:7070/error]('http://localhost:7070/error') — получение 500 ошибки;
-GET [http://localhost:7070/loading]('http://localhost:7070/loading') — индикатор загрузки.
+GET [http://localhost:7070/data](http://localhost:7070/data) — успешное получение данных;
+
+GET [http://localhost:7070/error](http://localhost:7070/error) — получение 500 ошибки;
+
+GET [http://localhost:7070/loading](http://localhost:7070/loading) — индикатор загрузки.
 Backend возьмите из каталога backend.
